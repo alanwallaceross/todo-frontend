@@ -9,7 +9,7 @@ function TodoManagementScreen() {
   const [todos, setTodos] = React.useState([]);
 
   React.useEffect(() => {
-    todoService.getAll().then((todos) => setTodos(todos));
+    todoService.getAll().then(({ todos }) => setTodos(todos));
   }, []);
 
   function handleTodoTitle(event) {
